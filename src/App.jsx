@@ -5,12 +5,14 @@ import Details from './pages/Details'
 import Home from './pages/Home'
 import './styles/App.scss'
 import List from './pages/List'
+import Search from './pages/Search'
 
 const App = () => {
   return (
     <Routes>
       <Route path='/' element={<Main />}>
         <Route index element={<Home />} />
+        <Route path='recipes/:name' element={<Search />} />
         <Route path='recipe/:id' element={<Details />} />
         <Route path='country' element={<List />} />
         <Route path='country/:name' element={<Filter />} />

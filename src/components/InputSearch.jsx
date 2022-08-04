@@ -11,12 +11,13 @@ const InputSearch = ({ text, handleSearch }) => {
     setInput(event.target.value)
   }
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault()
     handleSearch(input)
   }
 
   return (
-    <div className='input'>
+    <form className='input'>
       <div className='input-text'>
         <input
           type='text'
@@ -31,7 +32,7 @@ const InputSearch = ({ text, handleSearch }) => {
       <button onClick={handleSubmit}>
         <AiOutlineSearch className='icon' />
       </button>
-    </div>
+    </form>
   )
 }
 

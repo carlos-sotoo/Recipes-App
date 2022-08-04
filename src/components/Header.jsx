@@ -1,12 +1,13 @@
 import InputSearch from './InputSearch'
 import logo from '../assets/icon.png'
 import '../styles/components/header.scss'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { BiCategoryAlt, BiWorld } from 'react-icons/bi'
 
 const Header = () => {
+  const navigate = useNavigate()
   const handleSearch = (value) => {
-    console.log(value)
+    if (value.length > 0) { navigate(`/recipes/${value}`) }
   }
 
   return (

@@ -1,0 +1,48 @@
+@import '../utilities/mixins';
+
+.list {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  flex-flow: row wrap;
+  margin: auto;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 20px 0;
+
+  .recipe {
+    position: relative;
+    width: 200px;
+    padding: 10px 15px;
+    border: 2px solid $color-yellow;
+    @include font-Yellowtail(2rem, $color-yellow, false);
+    box-shadow: 1px 1px 5px $color-yellow;
+    text-align: center;
+    transition: all .3s ease-in-out;
+
+    &::after {
+      background-color: $color-yellow;
+      content: '';
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      position: absolute;
+      height: 0%;
+      transition: all .3s ease-in-out;
+      z-index: -1;
+    }
+
+    &:hover {
+      color: $color-white;
+      border-color: $color-white;
+      box-shadow: 0px 0px 5px $color-yellow, 0px 0px 3px $color-black;
+
+      &::after {
+        height: 100%;
+      }
+    }
+
+  }
+
+
+}
