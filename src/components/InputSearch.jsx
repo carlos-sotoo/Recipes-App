@@ -1,11 +1,17 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import { AiOutlineSearch } from 'react-icons/ai'
+import { useLocation } from 'react-router-dom'
 
 import '../styles/components/input-text.scss'
 
 const InputSearch = ({ text, handleSearch }) => {
   const [input, setInput] = useState('')
+  const location = useLocation()
+
+  useEffect(() => {
+    if (!location.pathname.includes('recipes')) setInput('')
+  }, [location])
 
   const handleChange = (event) => {
     setInput(event.target.value)
