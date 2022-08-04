@@ -1,0 +1,32 @@
+@import './variables/colors';
+@import './variables/fonts';
+
+@mixin flex($direction, $wrap, $gap) {
+  display: flex;
+  flex-wrap: $wrap;
+  gap: $gap;
+
+  @if not ($direction ==none) {
+    flex-direction: $direction;
+  }
+}
+
+@mixin font-Yellowtail($size, $color, $bold) {
+  font-family: $font-Yellowtail;
+  font-size: $size;
+  color: $color;
+
+  @if ($bold) {
+    font-weight: bold;
+  }
+}
+
+@mixin font-Opens-Sans($size, $color, $bold) {
+  font-family: $font-Opens-Sans;
+  font-size: $size;
+  color: $color;
+
+  @if ($bold) {
+    font-weight: bold;
+  }
+}

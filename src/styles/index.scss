@@ -1,0 +1,17 @@
+@import './utilities/reset';
+@import './utilities/variables/fonts';
+@import './utilities/variables/colors';
+
+body {
+  font-family: $font-Opens-Sans;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background: $color-white;
+  background: fixed no-repeat radial-gradient(circle, #fff 0%, $color-white 100%);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

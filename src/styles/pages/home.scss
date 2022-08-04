@@ -1,0 +1,32 @@
+@import '../utilities/mixins';
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  width: 100%;
+  gap: 40px;
+
+  .title {
+    width: fit-content;
+    font-size: 2rem;
+    font-weight: bold;
+    border-bottom: 2px solid $color-yellow;
+    margin-bottom: 15px;
+  }
+
+  .last {
+    width: 95%;
+
+    .last-visited {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit,
+          minmax(150px, 250px));
+      gap: 20px;
+      justify-content: center;
+    }
+  }
+
+}

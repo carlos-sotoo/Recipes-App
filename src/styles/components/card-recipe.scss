@@ -1,0 +1,59 @@
+@import '../utilities/mixins';
+
+.card-recipe {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 2px 2px 4px $color-black;
+
+  img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .description {
+    position: absolute;
+    top: 70%;
+    background-color: rgba(0, 0, 0, 0.336);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+
+    h4 {
+      margin: 5px auto;
+      text-shadow: 2px 2px 3px $color-black, 3px 3px 2px #000;
+      @include font-Yellowtail(calc(1rem + 1.7vw), $color-yellow, false)
+    }
+
+    .read-more {
+      display: block;
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: fit-content;
+      padding: 5px 8px;
+      @include font-Yellowtail(1.1rem, $color-white, false);
+      text-shadow: 0 0 3px $color-black;
+      background-color: $color-yellow;
+      border: 1px solid transparent;
+      box-shadow: 0 0 3px $color-yellow;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background-color: transparent;
+        border: 1px solid $color-yellow;
+      }
+    }
+  }
+
+  &:hover {
+    .description {
+      top: 0;
+    }
+  }
+
+}

@@ -1,0 +1,66 @@
+@import '../utilities/variables/colors';
+
+.input {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-end;
+
+  .input-text {
+    position: relative;
+    width: fit-content;
+    margin-top: -2px;
+
+    label {
+      position: absolute;
+      pointer-events: none;
+      bottom: 8px;
+      left: 10px;
+      font-size: 1rem;
+      font-family: sans-serif;
+      transition: 0.2s ease all;
+    }
+
+    input {
+      display: block;
+      width: 200px;
+      margin-top: 18px;
+      height: 30px;
+      padding-left: 5px;
+      border: none;
+      background-color: #fff2;
+      border-bottom: 2px solid #0005;
+      transition: 0.2s ease-in-out all;
+      outline: none;
+
+      &:focus,
+      &:valid {
+        outline: none;
+        border: 2px solid $color-yellow;
+
+        +label {
+          bottom: 23px;
+          font-size: 0.8rem;
+          background-color: $color-yellow;
+          padding: 1px 5px;
+          font-weight: bold;
+          color: $color-white;
+        }
+      }
+
+    }
+  }
+
+  button {
+    height: 30px;
+    width: 30px;
+    padding: 0;
+    background-color: $color-yellow;
+    border: none;
+    box-shadow: 0 0 4px #fec43a;
+    cursor: pointer;
+    color: $color-white;
+    font-size: 25px;
+    line-height: 25px;
+  }
+
+}
