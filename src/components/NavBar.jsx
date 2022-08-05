@@ -13,7 +13,7 @@ const categories = ['Beef', 'Breakfast', 'Chicken', 'Dessert', 'Goat', 'Lamb', '
 
 const NavBar = () => {
   const navigate = useNavigate()
-  const [clicked, setClicked] = useState(true)
+  const [clicked, setClicked] = useState(false)
   const refNav = useRef(null)
 
   const handleSearch = (value) => {
