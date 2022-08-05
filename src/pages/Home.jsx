@@ -16,7 +16,7 @@ const Home = () => {
           <div className='last-visited'>
             {storedValue.map(recipe => {
               if (recipe === null) return ''
-              return <CardRecipe recipe={recipe} key={recipe.id} />
+              return <CardRecipe key={recipe.id} recipe={recipe} />
             })}
           </div>
         </div>
