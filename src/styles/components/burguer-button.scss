@@ -1,0 +1,85 @@
+@import '../utilities/mixins';
+
+.burguer-button {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 40px;
+  width: 40px;
+  background-color: $color-yellow;
+  z-index: 500;
+
+  .cta {
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    .toggle-btn {
+      height: 3px;
+      width: 25px;
+      background-color: $color-white;
+      position: relative;
+      transition: all 0.3s ease-in-out;
+
+      &::before {
+        content: "";
+        height: 3px;
+        width: 25px;
+        box-shadow: 0 -8px 0 0 $color-white;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all 0.3s ease-in-out;
+      }
+
+      &::after {
+        content: "";
+        height: 3px;
+        width: 25px;
+        box-shadow: 0 8px 0 0 $color-white;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+
+    &.active {
+      .toggle-btn {
+        background-color: transparent;
+        transition: all 0.2s ease-in-out;
+
+        &::before {
+          top: 0;
+          transition: all 0.3s ease-in-out;
+        }
+
+        &::after {
+          top: 0;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+
+      .type15 {
+        transform: rotate(360deg);
+        transition: all 0.5s ease-in-out;
+
+        &::after {
+          left: 6px;
+          transform: translateY(5px) rotate(-226deg);
+        }
+
+        &::before {
+          left: 6px;
+          transform: translateY(-7px) rotate(-138deg);
+        }
+      }
+
+    }
+
+  }
+}

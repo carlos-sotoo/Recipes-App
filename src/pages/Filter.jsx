@@ -16,7 +16,7 @@ const Filter = () => {
 
   return (
     <div className='filter'>
-      {recipes.map(recipe => <CardRecipe recipe={recipe} key={recipe.id} />)}
+      {typeof (recipes) !== 'string' ? recipes.map(recipe => <CardRecipe recipe={recipe} key={recipe.id} />) : <h1>Ingredient {name} <br /> Not found</h1>}
     </div>
   )
 }

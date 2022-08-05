@@ -1,0 +1,62 @@
+@import '../utilities/mixins';
+
+
+
+.nav-bar {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 5px;
+  position: fixed;
+  top: 0;
+  left: -110%;
+  background-color: $color-white;
+  box-shadow: 2px 0 5px $color-black;
+  height: calc(100vh + 6px);
+  max-width: 360px;
+  width: 100%;
+  z-index: 100;
+  margin-top: -6px;
+  transition: all .4s ease-in-out;
+
+  &.active {
+    left: 0;
+  }
+
+  .link-nav {
+    width: 100%;
+    font-size: 1.5rem;
+    height: 30px;
+    color: $color-black;
+    font-weight: bold;
+    text-transform: capitalize;
+    transition: all .3s ease-in-out;
+    padding-left: 50px;
+
+    span {
+      transition: all .3s ease-in-out;
+      border-bottom: 3px solid transparent;
+    }
+
+    &:hover {
+      color: $color-yellow;
+
+      span {
+        color: $color-black;
+        border-color: $color-yellow;
+      }
+    }
+  }
+
+  .link-details {
+    color: $color-black;
+    font-size: 1rem;
+    padding: 4px 5px;
+
+    &:hover {
+      color: $color-yellow;
+      font-weight: bold;
+      text-shadow: 1px 1px 0px $color-black;
+    }
+  }
+}

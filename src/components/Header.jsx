@@ -1,26 +1,18 @@
-import InputSearch from './InputSearch'
+
 import logo from '../assets/icon.png'
 import '../styles/components/header.scss'
-import { Link, useNavigate } from 'react-router-dom'
-import { BiCategoryAlt, BiWorld } from 'react-icons/bi'
+import { Link } from 'react-router-dom'
+
+import NavBar from './NavBar'
 
 const Header = () => {
-  const navigate = useNavigate()
-  const handleSearch = (value) => {
-    if (value.length > 0) { navigate(`/recipes/${value}`) }
-  }
-
   return (
     <header className='header'>
+      <NavBar />
       <Link to="/" className='logo'>
         <img src={logo} alt="logo" />
         <span>Recipes <strong>App</strong></span>
       </Link>
-      <nav>
-        <InputSearch text="Search recipe" handleSearch={handleSearch} />
-        <Link to="/category" className='link'><BiCategoryAlt className='icon' />Categories</Link>
-        <Link to="/country" className='link'><BiWorld className='icon' />Countries</Link>
-      </nav>
     </header>
   )
 }

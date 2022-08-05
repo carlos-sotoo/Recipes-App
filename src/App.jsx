@@ -20,6 +20,8 @@ const App = () => {
         <Route path='category' element={<List />} />
         <Route path='category/:name' element={<Filter />} />
         <Route path='category/:name/recipe/:id' element={<Details />} />
+        <Route path='ingredient/:name' element={<Filter />} />
+        <Route path='ingredient/:name/recipe/:id' element={<Details />} />
         <Route path='*' element={<h1>Page not Found</h1>} />
       </Route>
     </Routes>

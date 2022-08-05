@@ -9,7 +9,7 @@ const filter = (param) => {
     case 'country':
       return 'a'
 
-    case 'ingredients':
+    case 'ingredient':
       return 'i'
     default:
       break
@@ -28,7 +28,6 @@ const useFilterRecipes = (param, query) => {
       setLoading(false)
     })
   }, [par, query])
-
   return [loading, recipes]
 }
 

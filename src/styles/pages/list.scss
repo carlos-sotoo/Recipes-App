@@ -3,10 +3,10 @@
 .list {
   width: 100%;
   max-width: 1100px;
-  display: flex;
-  flex-flow: row wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 200px);
   margin: auto;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 20px;
   padding: 20px 0;
 

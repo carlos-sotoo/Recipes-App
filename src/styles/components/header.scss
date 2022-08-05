@@ -5,7 +5,8 @@
   height: 40px;
   flex-flow: row nowrap;
   align-items: flex-end;
-  justify-content: space-around;
+  justify-content: center;
+  padding-right: 10px;
 
   .logo {
     display: flex;
@@ -23,42 +24,6 @@
 
       strong {
         color: $color-yellow;
-      }
-    }
-  }
-
-  nav {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: flex-end;
-    gap: 10px;
-
-    .link {
-      height: 40px;
-      display: inline-block;
-      line-height: normal;
-      font-size: 1.2rem;
-      vertical-align: middle;
-      padding: 5px 15px;
-      color: $color-black;
-      font-weight: bold;
-      border-bottom: 2px solid transparent;
-      transition: all .2s ease-in-out;
-
-      .icon {
-        display: inline-block;
-        font-size: 1.4rem;
-        vertical-align: middle;
-        margin-right: 5px;
-        transition: all .2s ease-in-out;
-      }
-
-      &:hover {
-        border-bottom: 2px solid $color-yellow;
-
-        .icon {
-          color: $color-yellow;
-        }
       }
     }
   }

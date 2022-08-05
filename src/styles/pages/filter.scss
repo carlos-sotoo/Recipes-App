@@ -5,4 +5,10 @@
       minmax(150px, 250px));
   gap: 20px;
   justify-content: center;
+
+  h1 {
+    width: 100%;
+    font-size: 3rem;
+    font-weight: bold;
+  }
 }

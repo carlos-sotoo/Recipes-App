@@ -1,0 +1,13 @@
+@import '../utilities/mixins';
+
+.footer {
+  margin-top: 6px;
+  padding: 5px;
+  background-color: $color-black;
+  color: $color-white;
+  text-align: center;
+
+  a {
+    @include font-Yellowtail(1.5rem, $color-yellow, false);
+  }
+}

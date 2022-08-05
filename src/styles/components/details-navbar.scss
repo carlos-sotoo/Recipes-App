@@ -1,0 +1,85 @@
+@import '../utilities/mixins';
+
+.details-nav-bar {
+  width: 100%;
+  font-size: 1.5rem;
+  height: 35px;
+  position: relative;
+  overflow: hidden;
+  min-height: 30px;
+  transition: all .3s ease-in-out;
+
+  .details-visible {
+    height: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+    color: $color-black;
+    z-index: 100;
+
+    .link {
+      color: $color-black;
+      font-weight: bold;
+      text-transform: capitalize;
+      transition: all .3s ease-in-out;
+
+      span {
+        transition: all .3s ease-in-out;
+        border-bottom: 3px solid transparent;
+      }
+
+      &:hover {
+        color: $color-yellow;
+
+        span {
+          color: $color-black;
+          border-color: $color-yellow;
+        }
+      }
+    }
+
+    .icon {
+      width: 15px;
+      height: 3px;
+      background-color: $color-black;
+
+      &::after {
+        display: block;
+        content: '';
+        width: 15px;
+        height: 3px;
+        background-color: $color-black;
+        transform: rotate(90deg);
+        transition: all .3s ease-in-out;
+      }
+
+      &.active {
+        &::after {
+          transform: rotate(0deg);
+        }
+      }
+    }
+
+  }
+
+  .details-panel {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 120px);
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    gap: 7px;
+    padding: 10px;
+    font-size: 1.2rem;
+    bottom: 0;
+    z-index: 10;
+
+  }
+
+  &.active {
+    height: 100%;
+  }
+}
